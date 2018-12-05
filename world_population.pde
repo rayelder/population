@@ -1,4 +1,3 @@
-
 // Source: http://www.worldometers.info/world-population/
 // Date: 10/19/2018
 
@@ -17,7 +16,6 @@ int instagramWidth, instagramHeight, margin;
 String projectTitle;
 
 void settings() {
-
   projectTitle = "world-population-180701";
   isPreview = false;
   exportPDF = true;
@@ -47,8 +45,6 @@ void setup () {
 
   colorMode(HSB, 360, 100, 100, 100);
   canvas = color(0, 0, 100, 100);
-  // foreground = color(0, 0, 0, 100);
-
   construction = color(0, 100, 100, 100);
 
   currentYear = new Population(7632819325L);
@@ -63,7 +59,6 @@ void draw() {
   currentYear.display();
 
   if (showGuides) {
-
     float w = instagramWidth - (margin * 2);
     float h = int(instagramHeight * ratio) - (margin * 2);
 

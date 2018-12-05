@@ -23,12 +23,9 @@ class Population {
   }
 
   private void display() {
-
     float w = instagramWidth - (margin * 2);
     //float h = int((instaHeight / 2) * ratio) - (margin * 2);
 
-    // noStroke();
-    // fill(foreground);
     noFill();
     strokeWeight(sW);
     stroke(foreground);
@@ -40,14 +37,8 @@ class Population {
 
     ellipse(xPos, yPos, w, w);
 
-
-
-
     int divisor = 100;
     float segmentAngle = (360.0 / divisor);
-
-    //println("population: " + population);
-    //println("remainder: " + population % billion);
 
     long billions = population / billion;
     float d1 = gap + ((billions - 1) * gap);
@@ -59,15 +50,11 @@ class Population {
     }
 
     long remainder = population % billion;
-
     float percentage = remainder / billionF;
-
     int ticks = int(divisor * percentage);
 
     for (int c = 0; c <= ticks; c++) {
-
       float angle = radians((segmentAngle * c) - 90);
-
       float angleX1 = ((d1 / 2) * cos(angle)) + xPos;
       float angleY1 = ((d1 / 2) * sin(angle)) + yPos;
       //ellipse(angleX1, angleY1, 5, 5);
